@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'App title',
       home: MyStatefulWidget(),
     );
   }
@@ -21,8 +18,11 @@ class MyFirstApp extends StatelessWidget {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
-    print("Counter: ${++counter}");
     return Container(child: Center(child: Text('Hello!')));
+  }
+
+  String getRunType() {
+    return "";
   }
 }
 
@@ -34,10 +34,12 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  int counter = 0;
   @override
   Widget build(BuildContext context) {
-    print("Counter: ${++counter}");
     return Container(child: Center(child: Text('Hello State!')));
+  }
+
+  String getRunType() {
+    return context.runtimeType.toString();
   }
 }
