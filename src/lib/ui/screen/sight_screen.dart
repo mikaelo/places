@@ -12,20 +12,36 @@ class _SightListScreenState extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text(
-            'Список\nинтересных мест',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 32,
-                fontFamily: 'Roboto',
-                height: 1.125),
-            textAlign: TextAlign.left,
-          ),
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          toolbarHeight: 72,
-        ));
+      titleSpacing: 0,
+      title: Padding(
+          padding: EdgeInsets.only(left: 16, top: 40, right: 16),
+          child: RichText(
+              text: TextSpan(
+                  children: [
+                TextSpan(
+                  text: "С",
+                  style: TextStyle(color: Colors.green),
+                ),
+                TextSpan(
+                  text: "писок",
+                ),
+                TextSpan(text: "\n"),
+                TextSpan(
+                  text: "и",
+                  style: TextStyle(color: Colors.yellow),
+                ),
+                TextSpan(text: "нтересных мест")
+              ],
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      height: 1.125)))),
+      backgroundColor: Colors.transparent,
+      elevation: 0.0,
+      toolbarHeight: 40 + 72,
+    ));
   }
 }
