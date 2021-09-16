@@ -13,9 +13,9 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-        title: Padding(
+      title: const Padding(
           padding: EdgeInsets.only(left: 16, top: 40, right: 16),
-          child: const Text(
+          child: Text(
             'Список\nинтересных мест',
             style: TextStyle(
                 color: Colors.black,
